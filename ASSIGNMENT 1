@@ -1,0 +1,67 @@
+# Program to create Dictionary, Tuple and List of students
+# and perform Add, Delete and Update operations
+
+# ---------------- Dictionary ----------------
+students_dict = {
+    1: "Yash",
+    2: "Rahul",
+    3: "Amit"
+}
+
+print("Original Dictionary:", students_dict)
+
+# Add
+students_dict[4] = "Rohan"
+print("After Adding:", students_dict)
+
+# Delete
+del students_dict[2]
+print("After Deleting:", students_dict)
+
+# Update
+students_dict[1] = "Yash Ingulkar"
+print("After Updating:", students_dict)
+
+
+# ---------------- List ----------------
+students_list = ["Yash", "Rahul", "Amit"]
+
+print("\nOriginal List:", students_list)
+
+# Add
+students_list.append("Rohan")
+print("After Adding:", students_list)
+
+# Delete
+students_list.remove("Rahul")
+print("After Deleting:", students_list)
+
+# Update
+students_list[0] = "Yash Ingulkar"
+print("After Updating:", students_list)
+
+
+# ---------------- Tuple ----------------
+students_tuple = ("Yash", "Rahul", "Amit")
+
+print("\nOriginal Tuple:", students_tuple)
+
+# Add, Delete and Update are not directly possible in a tuple
+# because tuples are immutable.
+
+# Convert tuple to list
+temp = list(students_tuple)
+
+# Add
+temp.append("Rohan")
+
+# Delete
+temp.remove("Rahul")
+
+# Update
+temp[0] = "Yash Ingulkar"
+
+# Convert back to tuple
+students_tuple = tuple(temp)
+
+print("After Add, Delete and Update:", students_tuple)
